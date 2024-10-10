@@ -1,26 +1,51 @@
-// import { readFile } from 'fs/promises';
-// import path, { dirname } from 'path';
-import StyleDictionary from 'style-dictionary';
-// import { convertToDTCG } from 'style-dictionary/utils';
-// import { fileURLToPath } from 'url';
+import StyleDictionary from "style-dictionary";
+import { register } from "@tokens-studio/sd-transforms";
 
-// const __filename = fileURLToPath(import.meta.url);
-// const __dirname = dirname(__filename);
+register(StyleDictionary);
+StyleDictionary.registerFileHeader({
+  name: "my-file-header",
+  // async is optional
+  fileHeader: async (defaultMessages = []) => {
+    const currentTime = new Date(Date.now()).toLocaleString("ko-KR", {
+      timeZone: "UTC",
+    });
+    return [`created at ${currentTime}`, ...defaultMessages];
+  },
+});
 
-// const PRIMITIVE_TOKEN_PATH = path.join(__dirname, `./sources/primitive.tokens.json`);
-// const PRIMITIVE_TOKEN = await readFile(PRIMITIVE_TOKEN_PATH,"utf8")
-// const primitive_token_dictionary = JSON.parse(PRIMITIVE_TOKEN)
-// const converted_primitive_token_dictonary = convertToDTCG(primitive_token_dictionary, { applyTypesToGroup: false });
-
-const config = { 
-  source: ["./tokens/sources/**/*.tokens.json"],
-  // tokens: {
-  //   primitive: {...converted_primitive_token_dictonary}
-  // },
+const config = {
+  // source: ["./tokens/sources/**/*.tokens.json"],
+  source: ["./tokens/sources/**/test.json"],
+  // source: ["./tokens/sources/**/tokens.json"],
+  preprocessors: ["tokens-studio"],
   platforms: {
     scss: {
-      transformGroup: "scss",
-      transforms: ["name/kebab"],
+      transformGroup: "tokens-studio",
+      transforms: [
+        "ts/descriptionToComment",
+        // "ts/resolveMath",
+        "ts/size/px",
+        "ts/opacity",
+        "ts/size/lineheight",
+        "ts/typography/fontWeight",
+        "ts/shadow/innerShadow",
+        "name/kebab",
+        "time/seconds",
+        "html/icon",
+        // "size/px",
+        "asset/url",
+        "fontFamily/css",
+        "cubicBezier/css",
+        "strokeStyle/css/shorthand",
+        "border/css/shorthand",
+        "typography/css/shorthand",
+        "transition/css/shorthand",
+        "shadow/css/shorthand",
+        "name/kebab",
+      ],
+      options: {
+        fileHeader: "my-file-header",
+      },
       buildPath: "tokens/dist/",
       files: [
         {
@@ -28,12 +53,11 @@ const config = {
           format: "scss/map-deep",
         },
       ],
-      usesDtcg: true
-    }
-  }
-}
+    },
+  },
+};
 
-const sd = new StyleDictionary({...config});
+const sd = new StyleDictionary({ ...config });
 
 await sd.cleanAllPlatforms();
 await sd.buildAllPlatforms();

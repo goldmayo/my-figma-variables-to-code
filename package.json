@@ -4,13 +4,13 @@
   "type": "module",
   "scripts": {
     "test": "test",
-    "token": "npx styled-dictionary build --config ./sd.config.json",
     "build": "node ./tokens/index.js"
   },
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@tokens-studio/sd-transforms": "^1.2.5",
     "style-dictionary": "^4.1.3"
   }
 }
