@@ -1,5 +1,6 @@
 import StyleDictionary from "style-dictionary";
 import { register } from "@tokens-studio/sd-transforms";
+import { outputReferencesFilter } from "style-dictionary/utils";
 
 register(StyleDictionary);
 StyleDictionary.registerFileHeader({
@@ -14,7 +15,9 @@ StyleDictionary.registerFileHeader({
 });
 
 const config = {
-  source: ["./tokens/sources/primitives.tokens.json"],
+  source: ["./tokens/sources/multiple/*.json"],
+  // source: ["./tokens/sources/**/primitive.tokens.json"],
+  // source: ["./tokens/sources/**/tokens.json"],
   preprocessors: ["tokens-studio"],
   log: {
     warnings: "warn", // 'warn' | 'error' | 'disabled'
@@ -50,6 +53,7 @@ const config = {
       ],
       options: {
         fileHeader: "my-file-header",
+        outputReferences: outputReferencesFilter,
       },
       buildPath: "tokens/dist/",
       files: [
