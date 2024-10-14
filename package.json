@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "build": "node ./tokens/index.js",
-    "test": "node ./tokens/multiRef.js"
+    "build": "node ./index.mjs"
   },
   "author": "",
   "license": "ISC",

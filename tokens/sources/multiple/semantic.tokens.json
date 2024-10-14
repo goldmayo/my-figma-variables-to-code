@@ -1,8 +1,0 @@
-{
-  "color": {
-    "text-color-high-emphasis": {
-      "$type": "color",
-      "$value": "{color.gray.100}"
-    }
-  }
-}
