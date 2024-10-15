@@ -1,0 +1,293 @@
+{
+  "sz-50": {
+    "value": "50px",
+    "type": "sizing"
+  },
+  "sz-400": {
+    "value": "400px",
+    "type": "sizing"
+  },
+  "white": {
+    "value": "#ffffff",
+    "type": "color"
+  },
+  "babyBlue": {
+    "value": "#f7faff",
+    "type": "color"
+  },
+  "steelBlue": {
+    "value": "#7b8796",
+    "type": "color"
+  },
+  "royalBlue": {
+    "value": "#4265ed",
+    "type": "color"
+  },
+  "sp-14": {
+    "value": "14px",
+    "type": "spacing"
+  },
+  "sp-20": {
+    "value": "20px",
+    "type": "spacing"
+  },
+  "sp-40": {
+    "value": "40px",
+    "type": "spacing"
+  },
+  "sp-50": {
+    "value": "50px",
+    "type": "spacing"
+  },
+  "borderWidth-Sm": {
+    "value": "1px",
+    "type": "borderWidth"
+  },
+  "primaryFont": {
+    "value": "Inter",
+    "type": "fontFamilies"
+  },
+  "fontWeight-Bold": {
+    "value": "Bold",
+    "type": "fontWeights"
+  },
+  "fontWeight-Regular": {
+    "value": "Regular",
+    "type": "fontWeights"
+  },
+  "fontSize-H6": {
+    "value": "14px",
+    "type": "fontSizes"
+  },
+  "fontSize-H5": {
+    "value": "16px",
+    "type": "fontSizes"
+  },
+  "fontSize-H1": {
+    "value": "40px",
+    "type": "fontSizes"
+  },
+  "lineHeight-H6": {
+    "value": "20px",
+    "type": "lineHeights"
+  },
+  "lineHeight-H5": {
+    "value": "20px",
+    "type": "lineHeights"
+  },
+  "lineHeight-H1": {
+    "value": "48px",
+    "type": "lineHeights"
+  },
+  "borderRadius-Sm": {
+    "value": "8px",
+    "type": "borderRadius"
+  },
+  "borderRadius-Md": {
+    "value": "16px",
+    "type": "borderRadius"
+  },
+  "backgroundColor": {
+    "value": "{darkBlue}",
+    "type": "color"
+  },
+  "logoHeight": {
+    "value": "{sz-50}",
+    "type": "sizing"
+  },
+  "headingTextcolor": {
+    "value": "{babyBlue}",
+    "type": "color"
+  },
+  "headingFontFamily": {
+    "value": "{primaryFont}",
+    "type": "fontFamilies"
+  },
+  "headingFontWeight": {
+    "value": "{fontWeight-Bold}",
+    "type": "fontWeights"
+  },
+  "headingLineHeight": {
+    "value": "{lineHeight-H1}",
+    "type": "lineHeights"
+  },
+  "headingFontSize": {
+    "value": "{fontSize-H1}",
+    "type": "fontSizes"
+  },
+  "bodyTextColor": {
+    "value": "{babyBlue}",
+    "type": "color"
+  },
+  "bodyFontFamily": {
+    "value": "{primaryFont}",
+    "type": "fontFamilies"
+  },
+  "fontWeightBody": {
+    "value": "{fontWeight-Regular}",
+    "type": "fontWeights"
+  },
+  "lineHeightBody": {
+    "value": "{lineHeight-H6}",
+    "type": "lineHeights"
+  },
+  "fontSizeBody": {
+    "value": "{fontSize-H6}",
+    "type": "fontSizes"
+  },
+  "inputTextColor": {
+    "value": "{babyBlue}",
+    "type": "color"
+  },
+  "inputFontFamily": {
+    "value": "{primaryFont}",
+    "type": "fontFamilies"
+  },
+  "inputFontWeight": {
+    "value": "{fontWeight-Regular}",
+    "type": "fontWeights"
+  },
+  "inputLineHeight": {
+    "value": "{lineHeight-H6}",
+    "type": "lineHeights"
+  },
+  "inputFontsize": {
+    "value": "{fontSize-H6}",
+    "type": "fontSizes"
+  },
+  "inputWidth": {
+    "value": "{sz-400}",
+    "type": "sizing"
+  },
+  "inputBackgroundColor": {
+    "value": "rgba({steelBlue}, 0.2)",
+    "type": "color"
+  },
+  "inputBorderColor": {
+    "value": "rgba( {white}, 0.2)",
+    "type": "color"
+  },
+  "inputBorderWidth": {
+    "value": "{borderWidth-Sm}",
+    "type": "borderWidth"
+  },
+  "inputPaddingX": {
+    "value": "{sp-20}",
+    "type": "spacing"
+  },
+  "inputPaddingY": {
+    "value": "{sp-14}",
+    "type": "spacing"
+  },
+  "inputBorderRadius": {
+    "value": "{borderRadius-Sm}",
+    "type": "borderRadius"
+  },
+  "buttonDisabledTextColor": {
+    "value": "{steelBlue}",
+    "type": "color"
+  },
+  "buttonFontFamily": {
+    "value": "{primaryFont}",
+    "type": "fontFamilies"
+  },
+  "buttonFontWeight": {
+    "value": "{fontWeight-Bold}",
+    "type": "fontWeights"
+  },
+  "buttonLineHeight": {
+    "value": "{lineHeight-H5}",
+    "type": "lineHeights"
+  },
+  "buttonFontSize": {
+    "value": "{fontSize-H5}",
+    "type": "fontSizes"
+  },
+  "buttonDisabledBackgroundColor": {
+    "value": "rgba({steelBlue}, 0.5)",
+    "type": "color"
+  },
+  "buttonBorderRadius": {
+    "value": "{borderRadius-Md}",
+    "type": "borderRadius"
+  },
+  "textLinkColor": {
+    "value": "{royalBlue}",
+    "type": "color"
+  },
+  "buttonPaddingX": {
+    "value": "{sp-20}",
+    "type": "spacing"
+  },
+  "buttonPaddingY": {
+    "value": "{sp-14}",
+    "type": "spacing"
+  },
+  "logoMarginBottom": {
+    "value": "{sp-50}",
+    "type": "spacing"
+  },
+  "headingPaddingBottom": {
+    "value": "{sp-20}",
+    "type": "spacing"
+  },
+  "inputGroupMarginTop": {
+    "value": "{sp-40}",
+    "type": "spacing"
+  },
+  "buttonMarginY": {
+    "value": "{sp-20}",
+    "type": "spacing"
+  },
+  "loginContentPadding": {
+    "value": "{sp-50}",
+    "type": "spacing"
+  },
+  "sz-500": {
+    "value": "500px",
+    "type": "sizing"
+  },
+  "loginContentWidth": {
+    "value": "{sz-500}",
+    "type": "sizing"
+  },
+  "loginContentBackgroundColor": {
+    "value": "{white}",
+    "type": "color"
+  },
+  "loginContentBorderRadius": {
+    "value": "{borderRadius-Lg}",
+    "type": "borderRadius"
+  },
+  "borderRadius-Lg": {
+    "value": "32px",
+    "type": "borderRadius"
+  },
+  "loginContentShadow": {
+    "value": {
+      "x": "0px",
+      "y": "30px",
+      "blur": "90px",
+      "spread": "0px",
+      "color": "rgba({steelBlue}, 0.3)",
+      "type": "dropShadow"
+    },
+    "type": "boxShadow"
+  },
+  "logo-image": {
+    "value": "url(../imgs/logo-dark.svg)",
+    "type": "asset"
+  },
+  "background-image": {
+    "value": "url(../imgs/background-image.png)",
+    "type": "asset"
+  },
+  "darkBlue": {
+    "value": "#03274C",
+    "type": "color"
+  },
+  "logoColor": {
+    "value": "{babyBlue}",
+    "type": "color"
+  }
+}

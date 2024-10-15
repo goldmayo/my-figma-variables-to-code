@@ -1,0 +1,134 @@
+@import '../build/scss/variables-dark';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+body {
+  background-color: $background-color;
+  margin: 0px;
+}
+
+
+
+.left-content {
+  padding: $login-content-padding;
+  width: $login-content-width;
+  // background-color: $login-content-background-color;
+  // border-radius: $login-content-border-radius;
+  // box-shadow: $login-content-shadow-x $login-content-shadow-y $login-content-shadow-blur $login-content-shadow-spread $login-content-shadow-color;
+}
+
+
+
+.logo {
+  margin-bottom: $logo-margin-bottom;
+  min-height: $logo-height;
+  background-repeat: no-repeat;
+  background-image: $logo-image;
+}
+
+.bg-image {
+  background-image: $background-image;
+  height: 100vh;
+}
+
+
+h1 {
+  color: $heading-textcolor;
+  font-family: $heading-font-family;
+  font-weight: $heading-font-weight;
+  font-size: $heading-font-size;
+  line-height: $heading-line-height;
+  padding-bottom: $heading-padding-bottom;
+}
+
+
+.body-text {
+  color: $body-text-color;
+  font-family: $body-font-family;
+  font-weight: $font-weight-body;
+  font-size: $font-size-body;
+  line-height: $line-height-body;
+}
+
+
+form {
+  margin-top: $input-group-margin-top;
+}
+
+
+.form-group {
+  // margin-bottom: 0px;
+}
+
+
+#email {
+  border-radius: 0px;
+  width: $input-width;
+  padding-top: $input-padding-y;
+  padding-bottom: $input-padding-y;
+  padding-left: $input-padding-x;
+  padding-right: $input-padding-x;
+  border-color: $input-border-color;
+  border-top-left-radius: $input-border-radius;
+  border-top-right-radius: $input-border-radius;
+  border-width: $input-border-width;
+  background-color: $input-background-color;
+
+  &::placeholder {
+    color: $input-text-color;
+    font-family: $input-font-family;
+    font-weight: $input-font-weight;
+    font-size: $input-fontsize;
+    line-height: $input-line-height;
+  }
+}
+
+
+
+#password {
+  border-radius: 0px;
+  width: $input-width;
+  padding-top: $input-padding-y;
+  padding-bottom: $input-padding-y;
+  padding-left: $input-padding-x;
+  padding-right: $input-padding-x;
+  border-color: $input-border-color;
+  border-bottom-left-radius: $input-border-radius;
+  border-bottom-right-radius: $input-border-radius;
+  border-left-width: $input-border-width;
+  border-right-width: $input-border-width;
+  border-bottom-width: $input-border-width;
+  border-top-width: 0px;
+  background-color: $input-background-color;
+
+  &::placeholder {
+    color: $input-text-color;
+    font-family: $input-font-family;
+    font-weight: $input-font-weight;
+    font-size: $input-fontsize;
+    line-height: $input-line-height;
+  }
+  // margin-top: -1px;
+}
+
+
+.btn-primary {
+  margin-top: $button-margin-y;
+  margin-bottom: $button-margin-y;
+  background-color: $button-disabled-background-color;
+  border-radius: $button-border-radius;
+  border: none;
+  padding-top: $button-padding-y;
+  padding-bottom: $button-padding-y;
+  padding-left: $button-padding-x;
+  padding-right: $button-padding-x;
+  color: $button-disabled-text-color;
+  font-family: $button-font-family;
+  font-size: $button-font-size;
+  font-weight: $button-font-weight;
+  line-height: $button-line-height;
+}
+
+
+.text-link {
+  color: $text-link-color;
+}

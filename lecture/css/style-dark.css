@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+body {
+  background-color: #03274C;
+  margin: 0px;
+}
+
+.left-content {
+  padding: 50px;
+  width: 500px;
+}
+
+.logo {
+  margin-bottom: 50px;
+  min-height: 50px;
+  background-repeat: no-repeat;
+  background-image: url(../imgs/logo-dark.svg);
+}
+
+.bg-image {
+  background-image: url(../imgs/background-image.png);
+  height: 100vh;
+}
+
+h1 {
+  color: #f7faff;
+  font-family: Inter;
+  font-weight: Bold;
+  font-size: 40px;
+  line-height: 48px;
+  padding-bottom: 20px;
+}
+
+.body-text {
+  color: #f7faff;
+  font-family: Inter;
+  font-weight: Regular;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+form {
+  margin-top: 40px;
+}
+
+#email {
+  border-radius: 0px;
+  width: 400px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-color: rgba(255, 255, 255, 0.2);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-width: 1px;
+  background-color: rgba(123, 135, 150, 0.2);
+}
+#email::placeholder {
+  color: #f7faff;
+  font-family: Inter;
+  font-weight: Regular;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+#password {
+  border-radius: 0px;
+  width: 400px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-color: rgba(255, 255, 255, 0.2);
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+  border-top-width: 0px;
+  background-color: rgba(123, 135, 150, 0.2);
+}
+#password::placeholder {
+  color: #f7faff;
+  font-family: Inter;
+  font-weight: Regular;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.btn-primary {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: rgba(123, 135, 150, 0.5);
+  border-radius: 16px;
+  border: none;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #7b8796;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: Bold;
+  line-height: 20px;
+}
+
+.text-link {
+  color: #4265ed;
+}
+
+/*# sourceMappingURL=style-dark.css.map */
