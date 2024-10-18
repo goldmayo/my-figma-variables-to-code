@@ -1,6 +1,9 @@
 import StyleDictionary from "style-dictionary";
 import { register } from "@tokens-studio/sd-transforms";
-import { convertTokensToVariables } from "./utils/index.mjs";
+import {
+  convertTokensToVariables,
+  convertTokensToThemeVariables,
+} from "./utils/index.mjs";
 
 // @tokens-studio/sd-transforms TransformGroup 등록
 register(StyleDictionary);
@@ -26,32 +29,33 @@ StyleDictionary.registerFileHeader({
 /**
  * 커스텀 테마 format
  *
- * THEME_FLAG : boolean(default: false)
- *  - html[data-theme="테마"] { ... } scss 테마 변수 인덴트 추가 플래그
+ *  - $scss 변수 생성 및
+ *  - html[data-theme="테마"] { ... } 생성
  */
 StyleDictionary.registerFormat({
   name: "custom/theme",
-  format: ({ dictionary, config }) => {
-    const THEME_FLAG = true;
+  format: ({ dictionary, file }) => {
+    const tokenFileName = file.destination.split(".")[1];
+    return convertTokensToThemeVariables(dictionary, tokenFileName);
+  },
+});
 
-    const lightTheme = convertTokensToVariables(
-      dictionary,
-      "light.tokens.json",
-      THEME_FLAG
-    );
-    const darkTheme = convertTokensToVariables(
-      dictionary,
-      "dark.tokens.json",
-      THEME_FLAG
-    );
-    const coreTokens = convertTokensToVariables(dictionary, "core.tokens.json");
-
-    return `html[data-theme="light"] {\n${lightTheme}\n}\n\nhtml[data-theme="dark"] {\n${darkTheme}\n}\n\n${coreTokens}`;
+/**
+ * 커스텀 테마 format
+ *
+ *  - $scss 변수 생성
+ *  - scss 변수 내부에 다른 색상 변수를 참조하는 경우 테마 파일에 맞는 css 변수로 변환
+ */
+StyleDictionary.registerFormat({
+  name: "custom/scss",
+  format: ({ dictionary, file }) => {
+    const tokenFileName = file.destination.split(".")[1];
+    return convertTokensToVariables(dictionary, tokenFileName);
   },
 });
 
 const config = {
-  source: [`./sources/*.tokens.json`],
+  source: [`./sources/*.json`],
   preprocessors: ["tokens-studio"],
   log: {
     warnings: "warn",
@@ -62,7 +66,6 @@ const config = {
   },
   platforms: {
     scss: {
-      prefix: "tokens",
       transformGroup: "tokens-studio",
       transforms: [
         "ts/descriptionToComment",
@@ -92,9 +95,18 @@ const config = {
       buildPath: "./tokens/",
       files: [
         {
-          destination: "tokens.scss",
+          destination: "tokens.core.scss",
+          format: "custom/scss",
+        },
+        {
+          destination: "tokens.light.scss",
           format: "custom/theme",
-          options: {},
+          filter: (token) => token.filePath.includes("light.json"),
+        },
+        {
+          destination: "tokens.dark.scss",
+          format: "custom/theme",
+          filter: (token) => token.filePath.includes("dark.json"),
         },
       ],
     },
